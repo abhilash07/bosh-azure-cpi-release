@@ -81,7 +81,7 @@ module Bosh::AzureCloud
           blob_size = vhd_size + 512
           options = {
             :timeout => 300, # seconds
-            :client_timeout_secs ==> 300
+            :client_timeout_secs => 300
           }
           @logger.info("create_empty_vhd_blob: Create empty vhd blob #{blob_name} with size #{blob_size}")
           @blob_service_client.create_page_blob(container_name, blob_name, blob_size, options)
